@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.Bitcoin.BitcoinActivity">
+
+
+
+    <TextView
+        android:id="@+id/timeUpdatedTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:text=""
+        android:textAlignment="center"
+        android:gravity="center"
+        style="@style/small_text"
+        android:layout_centerHorizontal="true"
+        />
+
+
+    <TextView
+        android:layout_below="@id/timeUpdatedTitle"
+        android:id="@+id/timeUpdated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:text=""
+        android:textAlignment="center"
+        android:gravity="center"
+        style="@style/small_text"
+        android:layout_centerHorizontal="true"
+         />
+
+
+<RelativeLayout
+    android:layout_centerInParent="true"
+    android:layout_centerVertical="true"
+    android:id="@+id/cardsContainer"
+    android:visibility="gone"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_20sdp"
+    android:layout_below="@+id/timeUpdated"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/euroCard"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_alignParentLeft="true"
+        android:layout_width="@dimen/_90sdp"
+        android:layout_height="@dimen/_200sdp"
+        app:cardCornerRadius="@dimen/_4sdp"
+        >
+
+        <RelativeLayout
+
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_centerHorizontal="true"
+                android:id="@+id/euroSymbol"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                style=""
+                android:src="@drawable/euro_symbo"></ImageView>
+
+
+
+
+            <TextView
+                android:layout_below="@id/euroSymbol"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/rate"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_weight="1"
+                style="@style/small_text"
+                android:text="" />
+            <TextView
+                android:layout_below="@id/rate"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_weight="1"
+                style="@style/small_text"
+                android:text="" />
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/dollarCard"
+        android:layout_centerHorizontal="true"
+        android:layout_width="@dimen/_90sdp"
+        android:layout_height="@dimen/_200sdp"
+        app:cardCornerRadius="@dimen/_4sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        >
+
+        <RelativeLayout
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_centerHorizontal="true"
+                android:id="@+id/dollarSymbol"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:src="@drawable/dollar_symbo"></ImageView>
+
+
+
+            <TextView
+                android:layout_below="@id/dollarSymbol"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/rateDollar"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_weight="1"
+                style="@style/small_text"
+                android:text="" />
+
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/rateDollar"
+                android:id="@+id/codeDollar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_weight="1"
+                style="@style/small_text"
+                android:text="" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_alignParentRight="true"
+        android:id="@+id/gbpCard"
+        app:cardCornerRadius="@dimen/_4sdp"
+        android:layout_gravity="center"
+        android:layout_width="@dimen/_90sdp"
+        android:layout_height="@dimen/_200sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            >
+            <ImageView
+                android:layout_centerHorizontal="true"
+                android:id="@+id/gbpSymbol"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:src="@drawable/pound_symbo"></ImageView>
+
+            <TextView
+                android:layout_below="@id/gbpSymbol"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/rateGbp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_weight="1"
+                style="@style/small_text"
+                android:text="" />
+
+            <TextView
+                android:layout_below="@id/rateGbp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/codeGbp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_weight="1"
+                style="@style/small_text"
+                android:text="" />
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>
+
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:id="@+id/disclaimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        style="@style/small_text"
+        android:textSize="@dimen/_8sdp"
+        android:text=""
+        />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminateTint="@color/black"
+        android:visibility="gone"
+        />
+
+
+</RelativeLayout>
